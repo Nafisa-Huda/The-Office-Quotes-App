@@ -1,0 +1,62 @@
+<!-- index.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Office Quote App</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  </head>
+
+  <body>
+    <section data-position="header" class="wrapper">
+      <h1>The Office</h1>
+    </section>
+
+    <section data-position="add-quote">
+      <h2>Add quote</h2>
+
+      <form action="/quotes" method="POST">
+        <input type="text" placeholder="name" name="name" />
+        <input type="text" placeholder="quote" name="quote" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+   
+    <section data-position="update-quote">
+      <div>
+        <h2>Dwight Schrute Interjects!</h2>
+        <p>
+          Replace first Jim Halpert quote with a quote written by Dwight Schrute.
+        </p>
+        <button id="update-button">Replace Jim Halpert's quote</button>
+      </div>
+    </section>
+    
+    <section data-position="delete-quote">
+      <div>
+        <h2>Remove Dwight Schrute!</h2>
+        <p>
+          Delete one Dwight Schrute quote. Does nothing if there are no more Dwight Schrute quotes.
+        </p>
+        <button id="delete-button">Delete Dwight Schrute's quote</button>
+        <div id="message"></div>
+      </div>
+    </section>
+
+    <section data-position="quotes">
+      <h2>Iconic Quotes:</h2>
+      <ul class="quotes">
+          <% for(let i = 0; i < quotes.length; i++) {%>
+              <li class="quote">
+                  <span><%= quotes[i].name %></span>:
+                  <span><%= quotes[i].quote %></span>
+              </li>
+          <% } %>
+      </ul>
+    </section>
+    <script src="/main.js"></script>
+  </body>
+</html>

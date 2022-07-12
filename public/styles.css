@@ -1,0 +1,98 @@
+*{
+    font-family: 'Special Elite', cursive;
+  }
+  
+  html, body{
+      background-color: #1b63bb;
+      color: #000000;
+      height: 100%;
+  }
+  
+  
+  /* Typing effects */
+  .wrapper {
+      /*For centering*/
+      display: grid;
+      place-items: center;
+    }
+  
+    h1 {
+      width: 8.7ch;
+      animation: typing 1.5s steps(10), blink .4s step-end infinite alternate;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 3px solid;
+      font-size: 2em;
+      text-decoration: underline;
+      margin: 0;
+    }
+    
+    @keyframes typing {
+      from {
+        width: 0
+      }
+    }
+        
+    @keyframes blink {
+      50% {
+        border-color: transparent
+      }
+    }
+  
+  /* grid css */
+  
+  html {
+    font-size: 125%;
+    line-height: 1.4;
+  }
+  
+  body {
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto auto 2fr;
+    grid-template-areas:
+      "header header header"
+      "add-quotes update-quote delete-quote"
+      "quotes quotes quotes";
+    gap: 1rem;
+    margin: 0;
+    padding: 1rem;
+  }
+  
+  [data-position="header"] {
+    grid-area: header;
+  }
+  
+  [data-position="add-quotes"] {
+    grid-area: add-quotes;
+  }
+  
+  [data-position="update-quotes"] {
+    grid-area: update-quotes;
+  }
+  
+  [data-position="delete-quotes"] {
+    grid-area: delete-quotes;
+  }
+  
+  [data-position="quotes"] {
+    grid-area: quotes;
+    overflow: scroll;
+  }
+  
+  [data-position] {
+    background-color: white;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  }
+  
+  h2 {
+    margin: 0;
+  } 
+  
+  /* buttons */
+  button{
+    cursor: pointer;
+  }
