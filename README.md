@@ -3,7 +3,7 @@
 ## About:
 A simple application that lets you keep track of quotes from "The Office" characters. Here's how it looks: 
 
-<img src="https://github.com/Nafisa-Huda/The-Office-quotes-application/blob/main/ezgif.com-gif-maker%20(1).gif" alt="The-Office Quotes Application">
+<img src="https://github.com/Nafisa-Huda/The-Office-Quotes-App/blob/main/ezgif.com-gif-maker%20(4).gif" alt="The-Office Quotes Application">
 <a href = https://the-office-application.herokuapp.com/>Link to site</a>
 
 ## How It's Made:
